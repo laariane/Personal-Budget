@@ -119,14 +119,12 @@ apiRouter.put(
 apiRouter.delete(
   "/envelopes/:id",
   [
-    //Route
     param("id")
       .notEmpty()
       .isNumeric()
       .custom((value) => {
         if (!budgetData.envelopes[Number(value)]) {
-          //validation rules from express-validation
-          throw new Error("Validation failed");
+             throw new Error("Validation failed");
         }
         return true;
       }),
