@@ -1,3 +1,6 @@
+//Mock data 
+//will replace this with either a MongoDB cluster or Postgres
+//will add Mock User Data 
 export interface Envelope{
  [key:string]:number;
 }
